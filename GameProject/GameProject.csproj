@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0D0D3A1-3FC7-4E43-B91C-23A51647C704}</ProjectGuid>
+    <ProjectTypeGuids>{9B831FEF-F496-498F-9FE8-180DA5CB4258};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GameProject</RootNamespace>
+    <AssemblyName>GameProject</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4">
+      <Private>False</Private>
+      <Package>opentk</Package>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4">
+      <Private>False</Private>
+      <Package>opentk</Package>
+    </Reference>
+    <Reference Include="OpenTK.Compatibility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4">
+      <Private>False</Private>
+      <Package>opentk</Package>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Linux, Version=2.5.1.0, Culture=neutral">
+      <Private>False</Private>
+      <Package>monogame</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Burger.cs" />
+    <Compile Include="CollisionResolutionInfo.cs" />
+    <Compile Include="CollisionSide.cs" />
+    <Compile Include="CollisionUtils.cs" />
+    <Compile Include="TeddyBear.cs" />
+    <Compile Include="GameConstants.cs" />
+    <Compile Include="Projectile.cs" />
+    <Compile Include="ProjectileType.cs" />
+    <Compile Include="Explosion.cs" />
+    <Compile Include="RandomNumberGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon.png" />
+    <None Include="Monogame DL-2\Lidgren.Network.dll" />
+    <None Include="Monogame DL-2\MonoGame.Framework.dll" />
+    <None Include="Monogame DL-2\SDL2#.dll" />
+    <None Include="Monogame DL-2\TheoraPlay#.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+    <Folder Include="Monogame DL-2\" />
+    <Folder Include="Assets\sounds\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="Assets\Arial20.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\burger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\BurgerDamage.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\BurgerDeath.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\BurgerShot.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\explosion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Explosion.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\frenchfries.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\teddybear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\teddybearprojectile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Gettext-ScanForTranslations>False</Gettext-ScanForTranslations>
+    </Content>
+    <Content Include="Assets\TeddyBounce.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sounds\BurgerDamage.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sounds\BurgerDeath.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sounds\BurgerShot.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sounds\Explosion.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sounds\TeddyBounce.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\sounds\TeddyShot.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TeddyShot.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
